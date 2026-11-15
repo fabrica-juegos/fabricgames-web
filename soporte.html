@@ -10,7 +10,16 @@
 <nav><a href="index.html">Inicio</a><a href="soporte.html">Soporte</a><a href="privacidad.html">Privacidad</a></nav>
 <h1>Soporte</h1>
 <p class="muted">¿Un error, una idea o una compra que no llegó? Escríbenos y cuéntanos el juego, tu modelo de iPhone y qué pasó.</p>
-<!--FORMULARIO-->
+<form class="form" action="https://api.supertools.cl/api/v1/hosting-public/forms/a8946428-4499-47b8-b48e-18ddaac1373a" method="POST">
+  <label>Tu nombre <input name="nombre" required></label>
+  <label>Tu correo <input name="email" type="email" required></label>
+  <label>Juego y modelo de iPhone <input name="juego"></label>
+  <label>¿En qué te ayudamos? <textarea name="mensaje" rows="5" required></textarea></label>
+  <input name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+  <button type="submit">Enviar</button>
+</form>
+<p id="ok" class="muted" hidden>✅ Mensaje enviado. Te responderemos pronto.</p>
+<script>if(location.search.includes('enviado=1'))document.getElementById('ok').hidden=false</script>
 <h2>Preguntas frecuentes</h2>
 <p><strong>¿Cómo quito los anuncios?</strong> Si el juego ofrece la opción, está en su tienda interna.</p>
 <p><strong>¿Cómo recupero una compra?</strong> En la tienda del juego, toca «Restaurar compras».</p>
